@@ -1,14 +1,43 @@
-import { Box } from '@chakra-ui/react'
 import Logo from './logo'
+import {
+  IoLogoTwitter,
+  IoLogoInstagram,
+  IoLogoGithub,
+  IoLogoLinkedin,
+  IoMail
+} from 'react-icons/io5'
+
+import {
+  Link,
+  Container,
+  Heading,
+  Box,
+  Button,
+  List,
+  ListItem,
+  SimpleGrid,
+  chakra,
+  Center,
+  Text,
+  Stack,
+  Avatar,
+  useColorModeValue
+} from '@chakra-ui/react'
+import Layout from '../components/layouts/article'
+import Section from '../components/section'
 
 const Footer = () => {
   return (
-
-    <Box align="center" opacity={0.4} fontSize="12px">
+    <Layout>
       <hr></hr>
-     <br></br> Thank You for visiting.  Inspired by <a target="_blank" href='https://www.youtube.com/watch?v=bSMZgXzC9AA'>devaslife</a>
-     <h2>&copy; Gaurav Garwa</h2>
-    </Box>
+      <Box align="center" opacity={0.4} fontSize="13px">
+        Thank You for visiting!
+        <p>&copy; Gaurav Garwa</p>
+      </Box>
+      <center>
+        <Logo />
+      </center>
+    </Layout>
   )
 }
 

@@ -9,8 +9,8 @@ const LogoBox = styled.span`
   display: inline-flex;
   align-items: center;
   height: 30px;
-  line-height: 20px;
-  padding: 10px;
+  line-height: 10px;
+  padding: 1px;
 
   > svg {
     transition: 200ms ease;
@@ -24,57 +24,50 @@ const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
 })
 
-
 const Logo = () => {
   return (
-    (<Link href="/" scroll={false}>
-
+    <Link href="/" scroll={false}>
       <LogoBox>
-       
         {/* <Text
           color={useColorModeValue('gray.800', 'whiteAlpha.900')}
           fontFamily='M PLUS Rounded 1c", sans-serif'
           fontWeight="bold"
           ml={3}
         > */}
-            <ProfileImage
-              src="/images/signature.png"
-              alt="sign"
-              width="130"
-              height="65"
-              marginTop={45}
-            />
+        <ProfileImage
+          src="/images/signature 2.png"
+          alt="sign"
+          width="130"
+          height="70"
+          mt={70}
+        />
         {/* </Text> */}
       </LogoBox>
-
-    </Link>)
-  );
+    </Link>
+  )
 }
 
 const Icon = () => {
   return (
-    (<Link href="/" scroll={false}>
-
+    <Link href="/" scroll={false}>
       <LogoBox>
-       
         {/* <Text
           color={useColorModeValue('gray.800', 'whiteAlpha.900')}
           fontFamily='M PLUS Rounded 1c", sans-serif'
           fontWeight="bold"
           ml={3}
         > */}
-            <ProfileImage
-              src="/images/signature.png"
-              alt="sign"
-              width="130"
-              height="65"
-              marginTop={45}
-            />
+        <ProfileImage
+          src="/images/signature.png"
+          alt="sign"
+          width="130"
+          height="65"
+          marginTop={45}
+        />
         {/* </Text> */}
       </LogoBox>
-
-    </Link>)
-  );
+    </Link>
+  )
 }
 
-export default Logo;
+export default Logo
