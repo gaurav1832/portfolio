@@ -49,10 +49,10 @@ const Home = () => (
       </center>
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1} textAlign="center">
-          <Heading as="h2" variant="page-title">
+          <Heading color={'#ffff'} as="h2" variant="page-title">
             Hi, I am Gaurav
           </Heading>
-          <p>CSE Undergrad | Web Developer | Explorer</p>
+          <p color={'#ffff'}>CSE Undergrad | Web Developer | Explorer</p>
 
           <Code
             marginTop={5}
