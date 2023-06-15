@@ -9,8 +9,10 @@ import {
   ListItem,
   chakra,
   Center,
-  Code
+  Code,
+  SimpleGrid
 } from '@chakra-ui/react'
+import { GridItem } from '../components/grid-item'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import {
@@ -23,6 +25,16 @@ import {
 import Image from 'next/image'
 import Paragraph from '../components/paragraph'
 
+import google from '../public/images/google-ctf.png'
+import sc900 from '../public/images/sc-900.png'
+
+import digitalagri from '../public/images/digital-agri.png'
+import urlshort from '../public/images/url-short.png'
+import snakegame from '../public/images/snake-game.png'
+import ttt from '../public/images/ttt.png'
+import wca from '../public/images/wca-preview.png'
+import leetracker from '../public/images/leetracker.png'
+import taim from '../public/images/taim.png'
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
 })
@@ -168,6 +180,69 @@ const Home = () => (
             </Button>
           </Link> */}
         </Center>
+      </Section>
+    </Container>
+
+    <Container>
+      <Heading textAlign={'center'} as="h1" fontSize={28} mb={5} mt={12}>
+        Projects
+      </Heading>
+
+      <Section delay={0.1}>
+        <SimpleGrid columns={[1, 1, 1]} gap={20}>
+          <GridItem
+            title="LeeTracker"
+            thumbnail={leetracker}
+            tech={'(Tech: ReactNative, GraphQL, JS, Expo)'}
+            description="LeeTracker is an easy-to-use application through which you can track your friend's progress on LeetCode and get notified about your friend’s recent and total submissions.
+            "
+            href="https://play.google.com/store/search?q=leetracker&c=apps"
+          />
+
+          <GridItem
+            title="Heat Waves and AQI Prediction"
+            thumbnail={taim}
+            tech={'(Tech: ML, Python and libraries, streamlit, postman, etc.)'}
+            description="Our team developed an AQI and heatwaves predicCon model during Telangana
+            AI Mission hackathon conducted by NASSCOM in collaboraCon with Government of Telangana and
+            Capgemini."
+            href="https://harshhrs24-team-cl-ai-mate-app-md7w7w.streamlit.app/"
+          />
+        </SimpleGrid>
+      </Section>
+    </Container>
+
+    <Link href="/projects" ml={8}>
+      <Button color="#178edd" backgroundColor={'#EDF2F7'}>
+        View all
+      </Button>
+    </Link>
+
+    <Container mt={12} fontSize="18px">
+      <Section>
+        <Heading
+          id="ctfs"
+          as="h2"
+          variant="section-title"
+          mt={15}
+          textAlign="center"
+          fontSize={'24px'}
+          padding="20px"
+        >
+          Certifications
+        </Heading>
+        <SimpleGrid columns={[1, 1, 1]} gap={6}>
+          <GridItem
+            href="https://www.coursera.org/account/accomplishments/professional-cert/XEXFS5QTXECG"
+            title="Google Data Analytics Professional (8 courses)"
+            thumbnail={google}
+          ></GridItem>
+          <GridItem
+            href="https://www.credly.com/badges/d8fe4ff3-e205-46b8-9e3d-4624d0c1338f/public_url"
+            title="Microsoft Certified: Security, Compliance, and Identity Fundamentals"
+            thumbnail={sc900}
+          ></GridItem>
+        </SimpleGrid>
       </Section>
     </Container>
   </Layout>
