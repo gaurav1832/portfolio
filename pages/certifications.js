@@ -23,6 +23,7 @@ import {
   IoLogoLinkedin
 } from 'react-icons/io5'
 import google from '../public/images/google-ctf.png'
+import sc900 from '../public/images/sc-900.png'
 import Image from 'next/image'
 
 const ProfileImage = chakra(Image, {
@@ -50,12 +51,11 @@ const Certifications = () => (
             title="Google Data Analytics Professional (8 courses)"
             thumbnail={google}
           ></GridItem>
-          {/* <GridItem
-            href="https://drive.google.com/file/d/1Vuvsr5ZauPO61dZpHDBDvOy2kzw_PQLm/view?usp=share_link"
-            title="AWS Cloud Practitioner Essentials"
-            thumbnail={aws}
-          >
-          </GridItem> */}
+          <GridItem
+            href="https://www.credly.com/badges/d8fe4ff3-e205-46b8-9e3d-4624d0c1338f/public_url"
+            title="Microsoft Certified: Security, Compliance, and Identity Fundamentals"
+            thumbnail={sc900}
+          ></GridItem>
         </SimpleGrid>
       </Section>
     </Container>

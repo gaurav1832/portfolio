@@ -157,7 +157,7 @@ const Home = () => (
 
         <Center>
           <Link
-            href="https://drive.google.com/file/d/11Hbl--kIyOIFHO9AlVUIl0cFANGvrY2z/view?usp=sharing"
+            href="https://drive.google.com/file/d/17QflD5fBC9O89zNUb_0NTAU71HA1ntcC/view?usp=sharing"
             target="_blank"
             mt={10}
           >
@@ -198,13 +198,12 @@ const Home = () => (
             "
             href="https://play.google.com/store/search?q=leetracker&c=apps"
           />
-
           <GridItem
             title="Heat Waves and AQI Prediction"
             thumbnail={taim}
             tech={'(Tech: ML, Python and libraries, streamlit, postman, etc.)'}
-            description="Our team developed an AQI and heatwaves predicCon model during Telangana
-            AI Mission hackathon conducted by NASSCOM in collaboraCon with Government of Telangana and
+            description="Our team developed an AQI and heatwaves prediction model during Telangana
+            AI Mission hackathon conducted by NASSCOM in collaboration with Government of Telangana and
             Capgemini."
             href="https://harshhrs24-team-cl-ai-mate-app-md7w7w.streamlit.app/"
           />
