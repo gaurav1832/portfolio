@@ -124,7 +124,7 @@ const Home = () => (
               colorScheme="transparent"
               fontSize={'18px'}
               padding={1}
-              children="("
+              children="{"
             />
             <Link href="https://linkedin.com/in/gaurav1832" target="_blank">
               <Button variant="ghost" color="white">
@@ -150,7 +150,7 @@ const Home = () => (
               colorScheme="transparent"
               fontSize={'18px'}
               padding={1}
-              children=")"
+              children="}"
             />
           </ListItem>
         </List>
