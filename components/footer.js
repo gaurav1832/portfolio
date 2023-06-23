@@ -21,7 +21,9 @@ import {
   Text,
   Stack,
   Avatar,
-  useColorModeValue
+  useColorModeValue,
+  Badge,
+  Divider
 } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
@@ -29,14 +31,20 @@ import Section from '../components/section'
 const Footer = () => {
   return (
     <Layout>
-      <hr></hr>
-      <Box align="center" opacity={0.4} fontSize="13px">
+      <Divider mt={'100px'} />
+      <Center></Center>
+      <Box align="center" fontSize="38px">
+        👨🏻‍💻
+        <Badge fontSize={'13px'}>Last updated - 22/06/23</Badge>
+      </Box>
+      <Box align="center" fontSize="16px">
         Thank You for visiting!
         <p>&copy; Gaurav Garwa</p>
       </Box>
-      <center>
+
+      {/* <center>
         <Logo />
-      </center>
+      </center> */}
     </Layout>
   )
 }
