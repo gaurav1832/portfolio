@@ -69,6 +69,7 @@ const Navbar = props => {
       <Container
         display="flex"
         p={2}
+        width={'100%'}
         wrap="wrap"
         align="center"
         justify="space-between"
@@ -94,20 +95,20 @@ const Navbar = props => {
           padding={2}
         >
           <LinkItem href="/about" path={path}>
-            <Code colorScheme="pink" size={34} children="About" />
+            <Code colorScheme="pink" size={38} children="About" />
           </LinkItem>
           <LinkItem href="/projects" path={path}>
-            <Code colorScheme="green" size={34} children="Projects" />
+            <Code colorScheme="green" size={38} children="Projects" />
           </LinkItem>
           <LinkItem href="/certifications" path={path}>
-            <Code colorScheme="orange" size={34} children="Certifications" />
+            <Code colorScheme="orange" size={38} children="Certifications" />
           </LinkItem>
-          <LinkItem href="/blogs">
+          {/* <LinkItem href="/blogs">
             {' '}
             <i>
               <Code colorScheme="gray" size={34} children="Blogs" />
             </i>
-          </LinkItem>
+          </LinkItem> */}
           <LinkItem href="mailto: garwagaurav@gmail.com">
             <IoMail />
           </LinkItem>
@@ -134,9 +135,9 @@ const Navbar = props => {
                 <MenuItem as={MenuLink} href="/certifications">
                   Certifications
                 </MenuItem>
-                <MenuItem as={MenuLink} href="/blogs">
+                {/* <MenuItem as={MenuLink} href="/blogs">
                   Blogs
-                </MenuItem>
+                </MenuItem> */}
               </MenuList>
             </Menu>
           </Box>

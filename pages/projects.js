@@ -10,6 +10,7 @@ import ttt from '../public/images/ttt.png'
 import wca from '../public/images/wca-preview.png'
 import leetracker from '../public/images/leetracker.png'
 import taim from '../public/images/taim.png'
+import artiSumm from '../public/images/arti-summ.png'
 
 const Posts = () => (
   <Layout title="Projects">
@@ -35,6 +36,14 @@ const Posts = () => (
             AI Mission hackathon conducted by NASSCOM in collaboraCon with Government of Telangana and
             Capgemini."
           href="https://harshhrs24-team-cl-ai-mate-app-md7w7w.streamlit.app/"
+        />
+
+        <GridItem
+          title="ArtiSumm"
+          thumbnail={artiSumm}
+          tech={'(Tech: JavaScript, React, RapidAPI)'}
+          description="ArtiSumm is an easy to use article summarizer which takes an url input to generate a brief summary about the content which is written int the url."
+          href="https://arti-summ.netlify.app"
         />
 
         <GridItem

@@ -11,7 +11,8 @@ import {
   Center,
   Code,
   SimpleGrid,
-  Highlight
+  Highlight,
+  shouldForwardProp
 } from '@chakra-ui/react'
 import {
   IoLogoTwitter,
@@ -50,6 +51,8 @@ import ttt from '../public/images/ttt.png'
 import wca from '../public/images/wca-preview.png'
 import leetracker from '../public/images/leetracker.png'
 import taim from '../public/images/taim.png'
+import sc900badge from '../public/images/microsoft-certified-security-compliance-and-identity-fundamentals.png'
+import googlebadge from '../public/images/google-data-analytics-certificate.2.png'
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -60,6 +63,12 @@ const Home = () => (
     <Container mt={'4.5rem'} fontSize="18px">
       <center>
         <Box
+          animate={{
+            scale: [1, 1, 1, 1, 1],
+            rotate: [0, 270, 270, 270, 0]
+          }}
+          boxShadow="2xl"
+          bg={'white'}
           borderWidth={2}
           w="220px"
           h="220px"
@@ -106,30 +115,6 @@ const Home = () => (
 
       <Section delay={0.1}>
         <List>
-          {/* <ListItem textAlign="center">
-            <Link href="mailto: garwagaurav@gmail.com" target="_blank">
-              <Button
-                mb={'10px'}
-                variant="ghost"
-                color="#178edd"
-                leftIcon={<IoMail />}
-              >
-                garwagaurav@gmail.com
-              </Button>
-            </Link>
-          </ListItem> */}
-
-          {/* <ListItem textAlign='center'>
-            <Link href="https://leetcode.com/gauravgarwa/" target="_blank">
-              <Button
-                variant="ghost"
-                color="#178edd"
-              >
-                Leetcode - @gauravgarwa
-              </Button>
-            </Link>
-          </ListItem> */}
-
           <ListItem textAlign="center">
             <Code
               marginTop={5}
@@ -350,6 +335,33 @@ const Home = () => (
           href="https://www.credly.com/badges/d8fe4ff3-e205-46b8-9e3d-4624d0c1338f/public_url"
           title="Microsoft Certified: Security, Compliance, and Identity Fundamentals"
           thumbnail={sc900}
+        ></GridItem>
+      </SimpleGrid>
+    </Container>
+
+    <Container>
+      <Heading
+        id="ctfs"
+        as="h2"
+        variant="section-title"
+        mt={15}
+        textAlign="center"
+        fontSize={'24px'}
+        padding="20px"
+      >
+        Badges
+      </Heading>
+      <SimpleGrid columns={[2, 3, 3]} gap={10}>
+        <GridItem
+          boxShadow="dark-lg"
+          href="https://www.credly.com/badges/a217be7c-e780-467b-a62a-dee1eb737ea5/public_url"
+          title=" "
+          thumbnail={googlebadge}
+        ></GridItem>
+        <GridItem
+          href="https://www.credly.com/badges/d8fe4ff3-e205-46b8-9e3d-4624d0c1338f/public_url"
+          title=""
+          thumbnail={sc900badge}
         ></GridItem>
       </SimpleGrid>
     </Container>
