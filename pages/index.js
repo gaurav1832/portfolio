@@ -12,7 +12,8 @@ import {
   Code,
   SimpleGrid,
   Highlight,
-  shouldForwardProp
+  shouldForwardProp,
+  Badge
 } from '@chakra-ui/react'
 import {
   IoLogoTwitter,
@@ -22,9 +23,9 @@ import {
   IoMail
 } from 'react-icons/io5'
 import { GridItem } from '../components/grid-item'
-import { Badge } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
+import Projects from './projects'
 import { BioSection, BioYear } from '../components/bio'
 import google from '../public/images/google-ctf.png'
 import Image from 'next/image'
@@ -51,6 +52,7 @@ import ttt from '../public/images/ttt.png'
 import wca from '../public/images/wca-preview.png'
 import leetracker from '../public/images/leetracker.png'
 import taim from '../public/images/taim.png'
+import codemaps from '../public/images/codemaps.png'
 import sc900badge from '../public/images/microsoft-certified-security-compliance-and-identity-fundamentals.png'
 import googlebadge from '../public/images/google-data-analytics-certificate.2.png'
 
@@ -254,7 +256,7 @@ const Home = () => (
         </SimpleGrid>
 
         <Link
-          href="https://drive.google.com/file/d/17QflD5fBC9O89zNUb_0NTAU71HA1ntcC/view?usp=sharing"
+          href="https://drive.google.com/file/d/1-4WGHl1LUioDFAP4Nq1eR77Z0jLFadQO/view?usp=sharing"
           target="_blank"
         >
           <Button
@@ -289,9 +291,19 @@ const Home = () => (
 
       <SimpleGrid columns={[1, 1, 1]} gap={20}>
         <GridItem
+          title="CodeMaps"
+          thumbnail={codemaps}
+          tech={
+            <Badge>React | Next | JS | ChakraUI | HTML | CSS | GitHub</Badge>
+          }
+          description="
+          CodeMaps is a project designed to help individuals prepare for technical interviews at top tech companies. It provides structured learning paths for mastering data structures and algorithms, offers company-specific interview questions, includes previous year interview queries, and shares valuable interview experiences. Whether you're a student, recent graduate, or professional aiming for tech career success."
+          href="https://play.google.com/store/search?q=leetracker&c=apps"
+        />
+        <GridItem
           title="LeeTracker"
           thumbnail={leetracker}
-          tech={'(Tech: ReactNative, GraphQL, JS, Expo)'}
+          tech={<Badge>ReactNative | GraphQL | JS | Expo</Badge>}
           description="LeeTracker is an easy-to-use application through which you can track your friend's progress on LeetCode and get notified about your friend’s recent and total submissions.
             "
           href="https://play.google.com/store/search?q=leetracker&c=apps"
@@ -299,7 +311,12 @@ const Home = () => (
         <GridItem
           title="Heat Waves and AQI Prediction"
           thumbnail={taim}
-          tech={'(Tech: ML, Python and libraries, streamlit, postman, etc.)'}
+          tech={
+            <Badge fontSize={12}>
+              {' '}
+              ML | Python and libraries, streamlit, postman, etc.
+            </Badge>
+          }
           description="Our team developed an AQI and heatwaves prediction model during Telangana
             AI Mission hackathon conducted by NASSCOM in collaboration with Government of Telangana and
             Capgemini."

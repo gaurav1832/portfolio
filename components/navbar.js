@@ -16,7 +16,8 @@ import {
   IconButton,
   useColorModeValue,
   Center,
-  Code
+  Code,
+  Divider
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
@@ -68,11 +69,11 @@ const Navbar = props => {
     >
       <Container
         display="flex"
+        flexDirection={'row'}
         p={2}
         width={'100%'}
         wrap="wrap"
-        align="center"
-        justify="space-between"
+        gap={10}
       >
         <LinkItem href="./" path={path}>
           <Code
@@ -93,15 +94,16 @@ const Navbar = props => {
           flexGrow={1}
           mt={{ base: 1, md: 0 }}
           padding={2}
+          gap={10}
         >
           <LinkItem href="/about" path={path}>
-            <Code colorScheme="pink" size={38} children="About" />
+            <Code colorScheme="pink" size={40} children="About" />
           </LinkItem>
           <LinkItem href="/projects" path={path}>
-            <Code colorScheme="green" size={38} children="Projects" />
+            <Code colorScheme="green" size={40} children="Projects" />
           </LinkItem>
           <LinkItem href="/certifications" path={path}>
-            <Code colorScheme="orange" size={38} children="Certifications" />
+            <Code colorScheme="orange" size={40} children="Certifications" />
           </LinkItem>
           {/* <LinkItem href="/blogs">
             {' '}
@@ -110,7 +112,7 @@ const Navbar = props => {
             </i>
           </LinkItem> */}
           <LinkItem href="mailto: garwagaurav@gmail.com">
-            <IoMail />
+            <IoMail size={20} />
           </LinkItem>
 
           {/* <ThemeToggleButton /> */}
@@ -143,6 +145,7 @@ const Navbar = props => {
           </Box>
         </Box>
       </Container>
+      <Divider />
     </Box>
   )
 }
