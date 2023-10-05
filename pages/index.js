@@ -298,7 +298,7 @@ const Home = () => (
           }
           description="
           CodeMaps is a project designed to help individuals prepare for technical interviews at top tech companies. It provides structured learning paths for mastering data structures and algorithms, offers company-specific interview questions, includes previous year interview queries, and shares valuable interview experiences. Whether you're a student, recent graduate, or professional aiming for tech career success."
-          href="https://play.google.com/store/search?q=leetracker&c=apps"
+          href="https://github.com/gaurav1832/CodeMaps"
         />
         <GridItem
           title="LeeTracker"
