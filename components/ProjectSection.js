@@ -1,5 +1,42 @@
 import React from "react";
 import Image from "next/image";
+import NextLink from "next/link";
+
+import {
+  Container,
+  Box,
+  Link,
+  Stack,
+  Heading,
+  Flex,
+  Menu,
+  MenuItem,
+  MenuList,
+  MenuButton,
+  IconButton,
+  useColorModeValue,
+  Center,
+  Code,
+  Divider,
+  Button,
+} from "@chakra-ui/react";
+
+const LinkItem = ({ href, path, target, children, ...props }) => {
+  const active = path === href;
+  return (
+    <Link
+      as={NextLink}
+      href={href}
+      scroll={false}
+      p={2}
+      bg={active ? "transparent" : undefined}
+      target={target}
+      {...props}
+    >
+      {children}
+    </Link>
+  );
+};
 
 const projects = [
   {
@@ -36,41 +73,9 @@ const projects = [
       "LeeTracker is an easy-to-use application through which you can track your friend's progress on LeetCode and get notified about your friend’s recent and total submissions.",
     href: "https://play.google.com/store/search?q=leetracker&c=apps",
   },
-
-  {
-    title: "ArtiSumm",
-    thumbnail: "/images/arti-summ.png",
-    tech: "(Tech: JavaScript, React, RapidAPI)",
-    description:
-      "ArtiSumm is an easy to use article summarizer which takes an url input to generate a brief summary about the content which is written int the url.",
-    href: "https://arti-summ.netlify.app",
-  },
-  {
-    title: "WhatsApp chat analysis",
-    thumbnail: "/images/wca-preview.png",
-    tech: "(Tech: python, pandas, matplotlib, seaborn, streamlit)",
-    description:
-      "Developed a chat analysis web app where you can analyse whatsapp statistics like daily, weekly and monthly activities.",
-    href: "https://gaurav1832-wca-app-4xpz9j.streamlit.app/",
-  },
-  {
-    title: "URL Shortener in flask",
-    thumbnail: "/images/url-short.png",
-    tech: "(Tech: python, flask, html, css)",
-    description:
-      "Made a url shortener app using python libraries and flask as web framework.",
-    href: "https://github.com/gaurav1832/url-shortener-flask",
-  },
-  {
-    title: "TicTacToe Game",
-    thumbnail: "/images/ttt.png",
-    tech: "(Tech: HTML, CSS, Javascript)",
-    description: "Simple tic tac toe game for fun.",
-    href: "https://gaurav1832.github.io/tic-tac-toe",
-  },
 ];
 
-const ProjectGrid = () => {
+const ProjectSection = () => {
   return (
     <div className="container mx-auto p-8 bg-transparent shadow-md rounded-lg">
       <h1 className="text-3xl text-center font-semibold border-b-2 pb-8 mb-8">
@@ -100,8 +105,12 @@ const ProjectGrid = () => {
           </div>
         ))}
       </div>
+
+      <LinkItem href="/projects" className="flex justify-center underline">
+        See more projects...
+      </LinkItem>
     </div>
   );
 };
 
-export default ProjectGrid;
+export default ProjectSection;
