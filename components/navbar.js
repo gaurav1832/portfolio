@@ -216,7 +216,11 @@ const Navbar = (props) => {
       zIndex={2}
       {...props}
     >
-      <Container className="flex justify-center items-center" p={2} gap={10}>
+      <Container className="flex justify-center items-center" p={2} gap={10} display="flex" flexDirection={"row"}
+        p={2}
+        width={"100%"}
+        wrap="wrap"
+        gap={10}>
         <LinkItem href="/" path={path}>
           <Image src={nameImage} width={110} height={70}></Image>
         </LinkItem>
