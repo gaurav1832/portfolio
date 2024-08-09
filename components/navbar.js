@@ -212,7 +212,6 @@ const Navbar = (props) => {
     <Box
       position="fixed"
       as="nav"
-      className="w-fit"
       css={{ backdropFilter: "blur(10px)" }}
       zIndex={2}
       {...props}
