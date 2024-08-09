@@ -182,7 +182,7 @@ const Home = () => {
   return (
     <>
       <Container fontSize="18px">
-        <div className="bg-white bg-opacity-5 shadow-lg p-4 rounded-lg flex flex-col justify-center items-center">
+        <div className="bg-white bg-opacity-5 shadow-lg p-4 mt-12 rounded-lg flex flex-col justify-center items-center">
           <Box
             animate={{
               scale: [1, 1, 1, 1, 1],
