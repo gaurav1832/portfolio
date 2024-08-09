@@ -2,7 +2,7 @@ const ParticlesConfig = {
   autoPlay: true,
   background: {
     color: {
-      value: '#1A202C'
+      value: '#0e0f12'
     },
     image: '',
     position: '',
@@ -135,14 +135,14 @@ const ParticlesConfig = {
               value: '#ffffff'
             },
             stop: {
-              value: '#1A202C'
+              value: '#0e0f12'
             }
           },
           radius: 1000
         },
         shadow: {
           color: {
-            value: '#1A202C'
+            value: '#0e0f12'
           },
           length: 2000
         }
@@ -513,7 +513,7 @@ const ParticlesConfig = {
       shadow: {
         blur: 5,
         color: {
-          value: '#1A202C'
+          value: '#0e0f12'
         },
         enable: false
       },
