@@ -283,7 +283,7 @@ import googlebadge from "../public/images/google-data-analytics-certificate.2.pn
 
 const About = () => {
   return (
-    <div className="max-w-4xl mx-auto bg-transparent shadow-md rounded-lg">
+    <div className="max-w-4xl mx-auto mt-12 bg-transparent shadow-md rounded-lg">
       <section className="mb-8">
         <h2 className="text-2xl font-semibold border-b-2 pb-2 mb-4">
           Education
