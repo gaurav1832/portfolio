@@ -210,9 +210,7 @@ const Navbar = (props) => {
 
   return (
     <Box
-      position="fixed"
       as="nav"
-      css={{ backdropFilter: "blur(10px)" }}
       zIndex={2}
       {...props}
     >
@@ -272,10 +270,10 @@ const Navbar = (props) => {
                 </MenuItem>
                 <MenuItem
                   as={MenuLink}
-                  href="/certifications"
+                  href="https://drive.google.com/file/d/1-4WGHl1LUioDFAP4Nq1eR77Z0jLFadQO/view?usp=sharing"
                   className="!bg-black"
                 >
-                  Certifications
+                  Resume
                 </MenuItem>
                 {/* <MenuItem as={MenuLink} href="/blogs">
                   Blogs
