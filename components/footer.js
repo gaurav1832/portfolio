@@ -31,16 +31,12 @@ import Section from "../components/section";
 const Footer = () => {
   return (
     <Layout>
-      <Divider />
+      <Divider className="mt-20" />
 
       <Box align="center" fontSize="16px" className="mt-3">
         Thank You for visiting!
         <p>&copy; Gaurav Garwa</p>
       </Box>
-
-      {/* <center>
-        <Logo />
-      </center> */}
     </Layout>
   );
 };

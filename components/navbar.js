@@ -28,8 +28,6 @@ import {
   IoMail,
 } from "react-icons/io5";
 
-import nameImage from "../public/images/name.png";
-
 const LinkItem = ({ href, path, target, children, ...props }) => {
   let active = path === href;
   const inactiveColor = useColorModeValue("gray.800", "whiteAlpha.900");
@@ -39,7 +37,6 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
       href={href}
       scroll={false}
       p={2}
-      bg={active ? "transparent" : undefined}
       color={active ? "yellow.300" : inactiveColor}
       target={target}
       {...props}
@@ -57,18 +54,20 @@ const Navbar = (props) => {
   const { path } = props;
 
   return (
-    <Box
-      as="nav"
-      zIndex={2}
-      {...props}
-    >
-      <Container className="flex justify-center items-center" p={2} gap={10} display="flex" flexDirection={"row"}
+    <Box as="nav" zIndex={2} {...props}>
+      <Container
+        className="flex justify-center items-center"
+        p={2}
+        gap={10}
+        display="flex"
+        flexDirection={"row"}
         p={2}
         width={"100%"}
         wrap="wrap"
-        gap={10}>
-        <LinkItem href="/" path={path}>
-          <Image src={nameImage} width={110} height={70}></Image>
+        gap={10}
+      >
+        <LinkItem href="/" path={path} className="name">
+          GauravGarwa
         </LinkItem>
 
         <Stack
@@ -89,10 +88,14 @@ const Navbar = (props) => {
           </LinkItem>
 
           <LinkItem
-            href="https://drive.google.com/file/d/1-4WGHl1LUioDFAP4Nq1eR77Z0jLFadQO/view?usp=sharing"
+            href="https://drive.google.com/file/d/18CS1pnm_rOueTIIrBnxZmSpK-itZT86q/view?usp=sharing"
             target="_blank"
           >
             <h2 className="font-bold">Resume</h2>
+          </LinkItem>
+
+          <LinkItem href="/contact" path={path}>
+            <h2 className="font-bold">Contact</h2>
           </LinkItem>
         </Stack>
 
@@ -123,9 +126,9 @@ const Navbar = (props) => {
                 >
                   Resume
                 </MenuItem>
-                {/* <MenuItem as={MenuLink} href="/blogs">
-                  Blogs
-                </MenuItem> */}
+                <MenuItem as={MenuLink} href="/contact">
+                  Contact
+                </MenuItem>
               </MenuList>
             </Menu>
           </Box>

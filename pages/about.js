@@ -1,5 +1,7 @@
 import React from "react";
 import Section from "../components/section";
+import { useRouter } from "next/router";
+
 import {
   Link,
   Container,
@@ -60,9 +62,16 @@ import sc900badge from "../public/images/microsoft-certified-security-compliance
 import googlebadge from "../public/images/google-data-analytics-certificate.2.png";
 
 const About = () => {
+  const router = useRouter();
   return (
-    <div className="max-w-4xl mx-auto mt-12 bg-transparent shadow-md rounded-lg">
+    <div className="max-w-4xl mx-auto mt-2 bg-transparent shadow-md rounded-lg">
       <section className="mb-8">
+        <button
+          onClick={() => router.push("/")}
+          className="mb-4 text-amber-100 hover:text-amber-200"
+        >
+          &larr; Home
+        </button>
         <h2 className="text-2xl font-semibold border-b-2 pb-2 mb-4">
           Education
         </h2>
@@ -221,4 +230,3 @@ const About = () => {
 };
 
 export default About;
-

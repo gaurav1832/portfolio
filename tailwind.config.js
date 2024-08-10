@@ -8,6 +8,9 @@ module.exports = {
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  fontFamily: {
+    marker: ["Permanent Marker", "cursive"],
+  },
   theme: {
     extend: {},
   },
