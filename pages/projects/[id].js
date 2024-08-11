@@ -34,13 +34,12 @@ const ProjectDetails = () => {
           className="rounded-lg w-full"
         />
       </div>
-
       <p className="text-lg text-gray-200 mb-1 font-bold">Technologies Used</p>
-      <ul className="flex space-x-3 flex-wrap text-amber-200 justify-items-start">
+      <ul className="flex flex-wrap gap-2 text-amber-200">
         {project.technologies.length > 0 ? (
           project.technologies.map((tech, index) => (
             <li
-              className="bg-zinc-800 rounded-md p-1 text-center text-sm"
+              className="bg-zinc-800 rounded-md p-2 text-center text-sm"
               key={index}
             >
               {tech}
