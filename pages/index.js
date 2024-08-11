@@ -97,7 +97,7 @@ const Home = () => {
             <p className="text-sm text-gray-400">Surajgarh, Rajasthan, IN</p>
 
             <Section delay={0.1}>
-              <section className="flex justify-center lg:space-x-20 md:space-x-10 sm:space-x-4 p-4">
+              <section className="flex justify-center lg:space-x-20 md:space-x-10 sm:space-x-4 p-4 text-sm font-semibold">
                 <p className="flex flex-col items-start">
                   <p className="flex space-x-2">
                     <IoPhonePortraitOutline className="text-yellow-200" />

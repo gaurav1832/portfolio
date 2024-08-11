@@ -1,7 +1,14 @@
-import React, { useState } from "react";
-import emailjs from "emailjs-com";
+require("dotenv").config();
+
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
+
+const EMAILJS_SERVICE_ID = "service_hbv5p9o";
+const EMAILJS_TEMPLATE_ID = "template_y54bao9";
+const PUBLIC_KEY = "sMrk67vY3eOrK3GJJ";
 
 const ContactForm = () => {
+  const form = useRef();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -14,22 +21,33 @@ const ContactForm = () => {
     setFormData({ ...formData, [name]: value });
   };
 
+  const templateParams = {
+    to_name: "Gaurav",
+    from_name: formData.name,
+    sender_email: formData.email,
+    subject: formData.subject,
+    message: formData.message,
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     emailjs
-      .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", formData, "YOUR_USER_ID")
+      .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams, {
+        publicKey: PUBLIC_KEY,
+      })
       .then(
         (result) => {
           alert("Message sent successfully!");
         },
         (error) => {
           alert("Failed to send message, please try again later.");
+          console.log(error);
         }
       );
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit} ref={form} className="space-y-4">
       <div>
         <label className="block text-sm font-medium">Name</label>
         <input

@@ -24,6 +24,7 @@ const Contact = () => {
           width="100%"
           height="350px"
           referrerpolicy="no-referrer-when-downgrade"
+          className="rounded-lg"
         ></iframe>
       </div>
       <div>
