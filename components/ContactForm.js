@@ -38,6 +38,7 @@ const ContactForm = () => {
       .then(
         (result) => {
           alert("Message sent successfully!");
+          setFormData({ name: "", email: "", subject: "", message: "" });
         },
         (error) => {
           alert("Failed to send message, please try again later.");
