@@ -98,19 +98,16 @@ const Home = () => {
 
             <Section delay={0.1}>
               <section className="flex justify-center lg:space-x-20 md:space-x-10 sm:space-x-4 p-4 text-sm font-semibold">
-                <p className="flex flex-col items-start">
+                {/* <p className="flex flex-col items-start">
                   <p className="flex space-x-2">
                     <IoPhonePortraitOutline className="text-yellow-200" />
                     <span className="text-gray-400 text-sm">PHONE</span>
                   </p>{" "}
-                  <p>+91-9828574239</p>
-                </p>
+                  <p>+91-</p>
+                </p> */}
 
-                <p className="flex flex-col items-start">
-                  <p className="flex space-x-2">
-                    <IoMail className="text-yellow-200" />
-                    <span className="text-gray-400 text-sm">EMAIL</span>
-                  </p>
+                <p className="flex items-center space-x-2">
+                  <IoMail className="text-yellow-200 text-lg" />
                   <a
                     href="mailto:garwagaurav@gmail.com"
                     className="text-gray-100"
